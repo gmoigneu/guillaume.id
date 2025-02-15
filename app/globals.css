@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-50;
+  }
+}
+
+html {
+  @apply bg-gray-900 text-gray-50;
+}
+
+@theme {
+  --default-font-family: proxima-nova, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: proxima-nova, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: yorkten-slab-normal, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* 
+font-family: "proxima-nova", sans-serif;
+font-weight: 600;
+font-style: normal;
+
+font-family: "yorkten-slab-normal", sans-serif;
+font-weight: 200;
+font-style: normal;
+
+font-family: "yorkten-slab-normal", sans-serif;
+font-weight: 200;
+font-style: italic;
+
+font-family: "yorkten-slab-normal", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "yorkten-slab-normal", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: "yorkten-slab-normal", sans-serif;
+font-weight: 500;
+font-style: normal;
+
+font-family: "yorkten-slab-normal", sans-serif;
+font-weight: 500;
+font-style: italic;
+
+font-family: "yorkten-slab-normal", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: "yorkten-slab-normal", sans-serif;
+font-weight: 700;
+font-style: italic; */

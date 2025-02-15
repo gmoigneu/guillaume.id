@@ -1,0 +1,6 @@
+{
+  "plugins": [
+  ],
+  "tailwindStylesheet": "./app/globals.css",
+  "tailwindConfig": "./tailwind.config.ts"
+}
