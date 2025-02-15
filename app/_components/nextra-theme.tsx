@@ -1,22 +1,22 @@
-import type { Folder } from "nextra";
-import { version } from "nextra/package.json";
 import type { FC, ReactNode } from "react";
-import { Footer } from "./footer";
-import { Navbar } from "./navbar";
-import { Link } from "next-view-transitions";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 export const NextraTheme: FC<{
   children: ReactNode;
-  pageMap: Folder[];
-}> = ({ children, pageMap }) => {
+}> = ({ children }) => {
   return (
     <>
-      <h1 className="font-serif text-2xl font-semibold">
-        <Link href="/">guillaume.id</Link>
-      </h1>
-      <Navbar pageMap={pageMap} />
-      <div style={{ display: "flex" }}>{children}</div>
-      <Footer />
+      <div className="fixed inset-0 flex justify-center sm:px-8">
+        <div className="flex w-full max-w-7xl lg:px-8">
+        <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
+      </div>
+    </div>
+    <div className="relative flex w-full flex-col">
+        <Header />
+        <main className="flex-auto">{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };

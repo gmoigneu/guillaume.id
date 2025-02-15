@@ -22,7 +22,7 @@ export default async function PostsPage() {
         className="not-prose"
         style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}
       >
-        {Object.entries(allTags).map(([tag, count]) => (
+        {Object.entries(allTags).map(([tag]) => (
           <Link key={tag} href={`/tags/${tag}`} className="nextra-tag">
             {tag}
           </Link>
