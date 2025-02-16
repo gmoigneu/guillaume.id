@@ -1,0 +1,30 @@
+routes:
+  "https://{default}/":
+    type: upstream
+    upstream: "next:http"
+    cache:
+      enabled: true
+  "https://www.{default}/":
+    type: redirect
+    to: "https://{default}/"
+
+applications:
+  next:
+    stack:
+      - "nodejs@22"
+    
+    web:
+      commands:
+        start: "npx next start -p $PORT"
+    
+    hooks:
+      build: |
+        set -x -e
+        npm install
+        npm run build
+
+    mounts:
+      "/.next/cache":
+        source: storage
+        source_path: nextcache
+    
