@@ -34,3 +34,31 @@
   --text-9xl: 8rem;
   --text-9xl--line-height: 1;
 }
+
+.prose p, .prose li, .prose a, .prose blockquote, .prose td, .prose th, .prose dd, .prose dt {
+  @apply font-serif;
+}
+
+.prose ul, ol {
+  @apply w-full flex-row mx-0 px-0;
+}
+
+.prose li {
+  @apply my-0 mx-0 ml-4 w-full items-baseline;
+}
+
+.prose li * {
+  @apply inline;
+}
+
+.prose a {
+  @apply flex;
+}
+
+.prose h2 {
+  @apply mt-12 mb-4;
+}
+
+.prose hr {
+  @apply my-12;
+}

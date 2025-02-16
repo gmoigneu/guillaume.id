@@ -1,6 +1,5 @@
 import Image, { type ImageProps } from 'next/image'
 import { Link } from 'next-view-transitions'
-import clsx from 'clsx'
 
 import { Button } from '@/_components/Button'
 import { Card } from '@/_components/Card'
@@ -8,20 +7,17 @@ import { Container } from '@/_components/Container'
 import {
   GitHubIcon,
   LinkedInIcon,
+  BlueSkyIcon,
 } from '@/_components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import logoGemmyo from '@/images/logos/gemmyo.webp'
+import logoSoon from '@/images/logos/soon.jpeg'
+import logoUpsun from '@/images/logos/upsun.svg'
+import logoEasycom from '@/images/logos/easycom.jpeg'
 import { formatDate } from '@/lib/formatDate'
 import { getArticles } from './articles/get-articles'
 import { Item } from 'nextra/normalize-pages'
 import { Metadata } from 'next'
+import { ArrowRightIcon } from 'nextra/icons'
 
 // function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 //   return (
@@ -191,7 +187,7 @@ function Resume() {
     {
       company: 'Upsun (Platform.sh)',
       title: 'Principal Technology Advocate',
-      logo: logoPlanetaria,
+      logo: logoUpsun,
       start: '2016',
       end: {
         label: 'Present',
@@ -201,21 +197,21 @@ function Resume() {
     {
       company: 'Gemmyo',
       title: 'CTO',
-      logo: logoAirbnb,
+      logo: logoGemmyo,
       start: '2013',
       end: '2016',
     },
     {
       company: 'Agence SOON',
       title: 'Solutions Architect',
-      logo: logoFacebook,
+      logo: logoSoon,
       start: '2010',
       end: '2013',
     },
     {
       company: 'Easycom Solutions',
       title: 'eCommerce Developer & PM',
-      logo: logoStarbucks,
+      logo: logoEasycom,
       start: '2006',
       end: '2010',
     },
@@ -232,9 +228,9 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      <Button href="https://www.linkedin.com/in/guillaumemoigneu/" variant="secondary" className="group mt-6 w-full">
+        Connect on LinkedIn
+        <ArrowRightIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
@@ -279,7 +275,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const metadata: Metadata = {
-  title: "Home | Guillaume Moigneu",
+  title: "Developer, Speaker, Optimization freak. Sustainability & AI enthusiast | Guillaume Moigneu",
   description: "Welcome to my personal website, where I share my experiences, projects, and insights on technology, sustainability, and AI.",
   keywords: "Guillaume Moigneu, Principal Technology Advocate, Upsun, AI, Sustainability, Technology",
 }
@@ -298,6 +294,9 @@ export default async function Home() {
             I&apos;m Guillaume Moigneu, alias G/, <span className='font-semibold'>Principal Technology Advocate at Upsun</span>, a cloud applications platform dedicated to simplifying application deployment and operations. With a focus on <span className='font-semibold'>AI and Sustainability</span>, I strive to make running apps seamless for every developer.
           </p>
           <div className="mt-6 flex gap-6">
+            <SocialLink href="https://bsky.app/profile/nls.io" icon={BlueSkyIcon} className="mt-4">
+              Follow on BlueSky
+            </SocialLink>
             <SocialLink href="https://github.com/gmoigneu" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
             </SocialLink>

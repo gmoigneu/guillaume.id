@@ -39,3 +39,6 @@ jspm_packages
 
 # Nextra
 .nextra
+
+# MacOS
+.DS_Store

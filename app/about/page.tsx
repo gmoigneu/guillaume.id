@@ -5,6 +5,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/_components/Container'
 import {
+  BlueSkyIcon,
   GitHubIcon,
   LinkedInIcon,
 } from '@/_components/SocialIcons'
@@ -25,9 +26,9 @@ function SocialLink({
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-red-500 dark:text-zinc-200 dark:hover:text-red-500"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-red-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -46,7 +47,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const metadata: Metadata = {
-  title: 'About me',
+  title: 'About Guillaume',
   description:
     'I\'m Guillaume Moigneu. Principal Technology Advocate at Upsun, a cloud applications platform dedicated to simplifying application deployment and operations. With a focus on AI and Sustainability, I strive to make running apps seamless for every developer.',
   keywords: "Guillaume Moigneu, Principal Technology Advocate, Upsun, AI, Sustainability, Technology",
@@ -68,45 +69,28 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Guillaume Moigneu, aka G/.
+            I'm Guillaume Moigneu, aka G/.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              I'm Guillaume Moigneu, a <strong>Principal Advocate at Upsun</strong>, a leading cloud application platform. My journey is fueled by a passion for two transformative fields: <strong>artificial intelligence (AI) and sustainability in cloud infrastructure</strong>.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              At Upsun, I've recently dived deep into AI, driven by the excitement of exploring and implementing cutting-edge solutions. I firmly believe that AI can revolutionize our ecosystem, from enhancing user experiences with intelligent systems to developing predictive models that drive innovation and efficiency. My work in AI is all about pushing technological boundaries and keeping Upsun at the forefront of advancement.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              Alongside AI, I'm deeply committed to making cloud infrastructure more sustainable. As the demand for cloud services grows, so does the need for environmentally responsible practices. I focus on integrating sustainable strategies into our operations, aiming to reduce carbon footprints and promote energy efficiency. This includes optimizing cloud resources, adopting renewable energy sources, and advocating for green technologies. My goal is to create a future where technological progress and environmental stewardship go hand in hand.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              Beyond my professional roles, I'm an avid learner who loves launching side projects to test new ideas and technologies. This constant exploration keeps me at the cutting edge of the tech industry. Originally from France, I now call Texas my home, where I continue to pursue my passions for AI, sustainability, and continuous learning.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            {/* <SocialLink href="#" icon={XIcon}>
-              Follow on X
+            <SocialLink href="https://bsky.app/profile/nls.io" icon={BlueSkyIcon}>
+              Follow on BlueSky
             </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink> */}
             <SocialLink href="https://github.com/gmoigneu" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
             </SocialLink>

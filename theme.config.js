@@ -1,7 +1,7 @@
 export default {
-  projectLink: "https://github.com/shuding/nextra", // GitHub link in the navbar
-  docsRepositoryBase: "https://github.com/shuding/nextra/blob/master", // base URL for the docs repository
-  titleSuffix: " – guillaume.id",
+  projectLink: "https://github.com/gmoigneu", // GitHub link in the navbar
+  docsRepositoryBase: "https://github.com/gmoigneu/guillaume.id/blob/main", // base URL for the docs repository
+  titleSuffix: " – Guillaume Moigneu",
   nextLinks: true,
   prevLinks: true,
   search: true,
@@ -13,14 +13,14 @@ export default {
   logo: (
     <>
       <svg>...</svg>
-      <span>Next.js Static Site Generator</span>
+      <span>Guillaume Moigneu's personal website</span>
     </>
   ),
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="guillaume.id" />
-      <meta name="og:title" content="guillaume.id" />
+      <meta name="description" content="Guillaume Moigneu's personal website" />
+      <meta name="og:title" content="Guillaume Moigneu's personal website" />
     </>
   ),
 };
