@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import { Bottom } from '@/_components/Bottom'
+import { Header } from '@/_components/Header'
 
 export const NextraTheme: FC<{
   children: ReactNode;
@@ -15,7 +15,7 @@ export const NextraTheme: FC<{
     <div className="relative flex w-full flex-col">
         <Header />
         <main className="flex-auto">{children}</main>
-        <Footer />
+        <Bottom />
       </div>
     </>
   );

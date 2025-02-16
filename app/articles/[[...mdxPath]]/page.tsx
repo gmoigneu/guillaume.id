@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 export async function generateMetadata(props) {
   const params = await props.params;
 
-  if (!params.mdxPath) {
+  if (!params.mdxPath || params.mdxPath[0] === "articles") {
     return {
       metadata: {
         title: "Last articles",
@@ -30,7 +30,7 @@ export async function generateMetadata(props) {
 export default async function Page(props) {
   const params = await props.params;
 
-  if (!params.mdxPath) {
+  if (!params.mdxPath || params.mdxPath[0] === "articles") {
     return <ArticlesIndex />;
   }
 

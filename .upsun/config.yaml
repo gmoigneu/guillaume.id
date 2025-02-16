@@ -24,7 +24,7 @@ applications:
         npm run build
 
     mounts:
-      "/.next/cache":
+      "/.next":
         source: storage
-        source_path: nextcache
+        source_path: next
     
