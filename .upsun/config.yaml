@@ -21,7 +21,7 @@ applications:
       build: |
         set -x -e
         npm install
-        npm run build
+        npm run build --verbose
 
     mounts:
       "/.next":
