@@ -2,10 +2,11 @@ import { useMDXComponents as getNextraComponents } from "nextra/mdx-components";
 import { TOC } from "./app/_components/toc";
 import { JSX, ReactNode } from "react";
 import { Heading } from "nextra";
-
+import { Metadata } from "next";
 interface WrapperProps {
   children: ReactNode;
   toc: Heading[];
+  metadata: Metadata;
 }
 
 interface MDXComponents {

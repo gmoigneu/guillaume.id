@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,7 +14,6 @@ import clsx from 'clsx'
 
 import { Container } from '@/_components/Container'
 import avatarImage from '@/images/avatar.jpg'
-import { Folder } from 'nextra'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (

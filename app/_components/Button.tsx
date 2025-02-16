@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import clsx from 'clsx'
 
 const variantStyles = {
@@ -27,8 +27,8 @@ export function Button({
   )
 
   return typeof props.href === 'undefined' ? (
-    <button className={className} {...props} />
+    <button className={className} {...props as React.ButtonHTMLAttributes<HTMLButtonElement>} />
   ) : (
-    <Link className={className} {...props} />
+    <Link className={className} {...props as React.AnchorHTMLAttributes<HTMLAnchorElement>} href={props.href} />
   )
 }

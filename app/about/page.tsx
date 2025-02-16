@@ -6,9 +6,7 @@ import clsx from 'clsx'
 import { Container } from '@/_components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from '@/_components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
@@ -48,9 +46,10 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'About me',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I\'m Guillaume Moigneu. Principal Technology Advocate at Upsun, a cloud applications platform dedicated to simplifying application deployment and operations. With a focus on AI and Sustainability, I strive to make running apps seamless for every developer.',
+  keywords: "Guillaume Moigneu, Principal Technology Advocate, Upsun, AI, Sustainability, Technology",
 }
 
 export default function About() {

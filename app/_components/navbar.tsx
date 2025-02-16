@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Folder, PageMapItem } from "nextra";
+import { Folder } from "nextra";
 import { Link } from "next-view-transitions";
 
 export const Navbar: FC<{ pageMap: Folder[] }> = ({ pageMap }) => {

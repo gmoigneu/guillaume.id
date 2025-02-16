@@ -1,5 +1,6 @@
 import { generateStaticParamsFor, importPage } from "nextra/pages";
-import { useMDXComponents } from "../../mdx-components";
+import { MDXWrapper } from "@/_components/MDXWrapper";
+import { ArticleLayout } from "@/_components/ArticleLayout";
 
 export const generateStaticParams = generateStaticParamsFor("mdxPath");
 
@@ -9,15 +10,26 @@ export async function generateMetadata(props) {
   return metadata;
 }
 
-const Wrapper = useMDXComponents().wrapper;
-
 export default async function Page(props) {
   const params = await props.params;
   const result = await importPage(params.mdxPath);
   const { default: MDXContent, toc, metadata } = result;
+
+  const contentType = params.mdxPath[0];
+
+  if (contentType === "articles") {
+    return (
+      <ArticleLayout article={metadata}>
+        <MDXWrapper toc={toc} metadata={metadata}>
+          <MDXContent {...props} params={params} />
+        </MDXWrapper>
+      </ArticleLayout>
+    );
+  }
+
   return (
-    <Wrapper toc={toc} metadata={metadata}>
+    <MDXWrapper toc={toc} metadata={metadata}>
       <MDXContent {...props} params={params} />
-    </Wrapper>
+    </MDXWrapper>
   );
 }
