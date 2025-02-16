@@ -22,7 +22,6 @@ function Appearance({
   cta,
   href,
   image,
-  slides,
 }: {
   title: string
   description: string
@@ -30,7 +29,6 @@ function Appearance({
   cta: string
   href: string
   image: StaticImageData | null
-  slides: string | null
 }) {
   return (
     <Card as="article">
@@ -120,7 +118,7 @@ export default function Speaking() {
             description="Sustainability is a real competitive advantage, not just a nice-to-have. Integrating it early makes businesses stronger and more resilient, and infrastructure plays a key role in driving sustainable growth. "
             event="AI Action Summit 2025"
             image={imageAiSummit2025}
-            slides="/pdfs/SymfonyCon2024Vienna.pdf"
+            // slides="/pdfs/SymfonyCon2024Vienna.pdf"
             cta="Watch video"
           />
           <Appearance
@@ -129,7 +127,7 @@ export default function Speaking() {
             description="Whether you're an AI enthusiast or a developer curious about machine learning, this session will equip you with the knowledge to implement ML inference in your Symfony applications. This talk will show by example how to implement ONNX (Open Neural Network Exchange) and Transformer models to bring advanced AI capabilities to your Symfony projects."
             event="SymfonyCon 2024"
             image={imageSymfonyCon2024}
-            slides="/pdfs/SymfonyCon2024Vienna.pdf"
+            // slides="/pdfs/SymfonyCon2024Vienna.pdf"
             cta="Watch video"
           />
           <Appearance
@@ -138,7 +136,7 @@ export default function Speaking() {
             description="Deploying an app for the first time is always daunting. It does not need to be. We will setup a quick ChatGPT client based on a Symfony REST API and a React frontend. These app will be deployed to Upsun where we will analyze some performance bottlenecks and scale the infrastructure appropriately based on these findings."
             event="SymfonyCon 2023"
             image={imageSymfonyCon2023}
-            slides=""
+            // slides=""
             cta="Watch video"
           />
           <Appearance
@@ -147,7 +145,7 @@ export default function Speaking() {
             description="Deploying an app for the first time is always daunting. It does not need to be. We will setup a quick ChatGPT client based on a Symfony REST API and a React frontend. These app will be deployed to Upsun where we will analyze some performance bottlenecks and scale the infrastructure appropriately based on these findings."
             event="SymfonyCon 2023"
             image={imageDjangoCon2023}
-            slides="/pdfs/DjangoCon2023.pdf"
+            // slides="/pdfs/DjangoCon2023.pdf"
             cta="Watch video"
           />
         </SpeakingSection>

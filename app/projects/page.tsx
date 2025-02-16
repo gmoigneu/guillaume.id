@@ -12,7 +12,7 @@ const projects = [
     name: 'AskCodex',
     description:
       'AskCodex augments Tabletop RPGs with AI-powered agents.',
-    link: { href: 'http://askcodex.ai', label: 'askcodex.ai' },
+    link: { href: 'https://askcodex.ai', label: 'askcodex.ai' },
     logo: logoAskCodex,
   },
   {

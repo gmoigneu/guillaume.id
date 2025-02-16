@@ -49,7 +49,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About Guillaume',
   description:
-    'I\'m Guillaume Moigneu. Principal Technology Advocate at Upsun, a cloud applications platform dedicated to simplifying application deployment and operations. With a focus on AI and Sustainability, I strive to make running apps seamless for every developer.',
+    "I'm Guillaume Moigneu. Principal Technology Advocate at Upsun, a cloud applications platform dedicated to simplifying application deployment and operations. With a focus on AI and Sustainability, I strive to make running apps seamless for every developer.",
   keywords: "Guillaume Moigneu, Principal Technology Advocate, Upsun, AI, Sustainability, Technology",
 }
 
@@ -69,20 +69,20 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I'm Guillaume Moigneu, aka G/.
+            I&apos;m Guillaume Moigneu, aka G/.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I'm Guillaume Moigneu, a <strong>Principal Advocate at Upsun</strong>, a leading cloud application platform. My journey is fueled by a passion for two transformative fields: <strong>artificial intelligence (AI) and sustainability in cloud infrastructure</strong>.
+              Hey there. I am a <strong>Principal Advocate at Upsun</strong>, a leading cloud application platform. My journey is fueled by a passion for two transformative fields: <strong>artificial intelligence (AI) and sustainability in cloud infrastructure</strong>.
             </p>
             <p>
-              At Upsun, I've recently dived deep into AI, driven by the excitement of exploring and implementing cutting-edge solutions. I firmly believe that AI can revolutionize our ecosystem, from enhancing user experiences with intelligent systems to developing predictive models that drive innovation and efficiency. My work in AI is all about pushing technological boundaries and keeping Upsun at the forefront of advancement.
+              At Upsun, I&apos;ve recently dived deep into AI, driven by the excitement of exploring and implementing cutting-edge solutions. I firmly believe that AI can revolutionize our ecosystem, from enhancing user experiences with intelligent systems to developing predictive models that drive innovation and efficiency. My work in AI is all about pushing technological boundaries and keeping Upsun at the forefront of advancement.
             </p>
             <p>
-              Alongside AI, I'm deeply committed to making cloud infrastructure more sustainable. As the demand for cloud services grows, so does the need for environmentally responsible practices. I focus on integrating sustainable strategies into our operations, aiming to reduce carbon footprints and promote energy efficiency. This includes optimizing cloud resources, adopting renewable energy sources, and advocating for green technologies. My goal is to create a future where technological progress and environmental stewardship go hand in hand.
+              Alongside AI, I&apos;m deeply committed to making cloud infrastructure more sustainable. As the demand for cloud services grows, so does the need for environmentally responsible practices. I focus on integrating sustainable strategies into our operations, aiming to reduce carbon footprints and promote energy efficiency. This includes optimizing cloud resources, adopting renewable energy sources, and advocating for green technologies. My goal is to create a future where technological progress and environmental stewardship go hand in hand.
             </p>
             <p>
-              Beyond my professional roles, I'm an avid learner who loves launching side projects to test new ideas and technologies. This constant exploration keeps me at the cutting edge of the tech industry. Originally from France, I now call Texas my home, where I continue to pursue my passions for AI, sustainability, and continuous learning.
+              Beyond my professional roles, I&apos;m an avid learner who loves launching side projects to test new ideas and technologies. This constant exploration keeps me at the cutting edge of the tech industry. Originally from France, I now call Texas my home, where I continue to pursue my passions for AI, sustainability, and continuous learning.
             </p>
           </div>
         </div>

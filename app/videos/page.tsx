@@ -50,7 +50,7 @@ export default function Speaking() {
   return (
     <SimpleLayout
       title="A collection of online videos I have made."
-      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+      intro="One of my favorite ways to share my ideas is live on stage, where there's so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
     >
       <div className="space-y-20">
         <SpeakingSection title="Conferences">
@@ -64,7 +64,7 @@ export default function Speaking() {
           <Appearance
             href="#"
             title="Lessons learned from our first product recall"
-            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
+            description="They say that if you're not embarassed by your first version, you're doing it wrong. Well when you're selling DIY space shuttle kits it turns out it's a bit more complicated."
             event="Business of Startups 2020"
             cta="Watch video"
           />
