@@ -1,23 +1,23 @@
-import Image, { type ImageProps } from 'next/image'
-import { Link } from 'next-view-transitions'
+import Image, { type ImageProps } from "next/image";
+import { Link } from "next-view-transitions";
 
-import { Button } from '@/_components/Button'
-import { Card } from '@/_components/Card'
-import { Container } from '@/_components/Container'
+import { Button } from "@/_components/Button";
+import { Card } from "@/_components/Card";
+import { Container } from "@/_components/Container";
 import {
   GitHubIcon,
   LinkedInIcon,
   BlueSkyIcon,
-} from '@/_components/SocialIcons'
-import logoGemmyo from '@/images/logos/gemmyo.webp'
-import logoSoon from '@/images/logos/soon.jpeg'
-import logoUpsun from '@/images/logos/upsun.svg'
-import logoEasycom from '@/images/logos/easycom.jpeg'
-import { formatDate } from '@/lib/formatDate'
-import { getArticles } from './articles/get-articles'
-import { Item } from 'nextra/normalize-pages'
-import { Metadata } from 'next'
-import { ArrowRightIcon } from 'nextra/icons'
+} from "@/_components/SocialIcons";
+import logoGemmyo from "@/images/logos/gemmyo.webp";
+import logoSoon from "@/images/logos/soon.jpeg";
+import logoUpsun from "@/images/logos/upsun.svg";
+import logoEasycom from "@/images/logos/easycom.jpeg";
+import { formatDate } from "@/lib/formatDate";
+import { getArticles } from "./articles/get-articles";
+import { Item } from "nextra/normalize-pages";
+import { Metadata } from "next";
+import { ArrowRightIcon } from "nextra/icons";
 
 // function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 //   return (
@@ -42,7 +42,7 @@ import { ArrowRightIcon } from 'nextra/icons'
 //   )
 // }
 
-function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -62,37 +62,35 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  )
+  );
 }
 
 function Article({ article }: { article: Item }) {
   return (
-    <Link href={article.route}>
+    <Link href={article.frontMatter.url ?? article.route}>
       <Card as="article">
-        <Card.Title>
-          {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.frontMatter.date} decorate>
-        {formatDate(article.frontMatter.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.frontMatter.description}</Card.Description>
+        <Card.Title>{article.title}</Card.Title>
+        <Card.Eyebrow as="time" dateTime={article.frontMatter.date} decorate>
+          {formatDate(article.frontMatter.date)}
+        </Card.Eyebrow>
+        <Card.Description>{article.frontMatter.description}</Card.Description>
         <Card.Cta>Read article</Card.Cta>
       </Card>
     </Link>
-  )
+  );
 }
 
 function SocialLink({
   icon: Icon,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>
+  icon: React.ComponentType<{ className?: string }>;
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
-  )
+  );
 }
 
 // function Newsletter() {
@@ -125,21 +123,21 @@ function SocialLink({
 // }
 
 interface Role {
-  company: string
-  title: string
-  logo: ImageProps['src']
-  start: string | { label: string; dateTime: string }
-  end: string | { label: string; dateTime: string }
+  company: string;
+  title: string;
+  logo: ImageProps["src"];
+  start: string | { label: string; dateTime: string };
+  end: string | { label: string; dateTime: string };
 }
 
 function Role({ role }: { role: Role }) {
   const startLabel =
-    typeof role.start === 'string' ? role.start : role.start.label
+    typeof role.start === "string" ? role.start : role.start.label;
   const startDate =
-    typeof role.start === 'string' ? role.start : role.start.dateTime
+    typeof role.start === "string" ? role.start : role.start.dateTime;
 
-  const endLabel = typeof role.end === 'string' ? role.end : role.end.label
-  const endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+  const endLabel = typeof role.end === "string" ? role.end : role.end.label;
+  const endDate = typeof role.end === "string" ? role.end : role.end.dateTime;
 
   return (
     <li className="flex gap-4">
@@ -160,49 +158,49 @@ function Role({ role }: { role: Role }) {
           className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
           aria-label={`${startLabel} until ${endLabel}`}
         >
-          <time dateTime={startDate}>{startLabel}</time>{' '}
-          <span aria-hidden="true">—</span>{' '}
+          <time dateTime={startDate}>{startLabel}</time>{" "}
+          <span aria-hidden="true">—</span>{" "}
           <time dateTime={endDate}>{endLabel}</time>
         </dd>
       </dl>
     </li>
-  )
+  );
 }
 
 function Resume() {
   const resume: Array<Role> = [
     {
-      company: 'Upsun (Platform.sh)',
-      title: 'Principal Technology Advocate',
+      company: "Upsun (Platform.sh)",
+      title: "Principal Technology Advocate",
       logo: logoUpsun,
-      start: '2016',
+      start: "2016",
       end: {
-        label: 'Present',
+        label: "Present",
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Gemmyo',
-      title: 'CTO',
+      company: "Gemmyo",
+      title: "CTO",
       logo: logoGemmyo,
-      start: '2013',
-      end: '2016',
+      start: "2013",
+      end: "2016",
     },
     {
-      company: 'Agence SOON',
-      title: 'Solutions Architect',
+      company: "Agence SOON",
+      title: "Solutions Architect",
       logo: logoSoon,
-      start: '2010',
-      end: '2013',
+      start: "2010",
+      end: "2013",
     },
     {
-      company: 'Easycom Solutions',
-      title: 'eCommerce Developer & PM',
+      company: "Easycom Solutions",
+      title: "eCommerce Developer & PM",
       logo: logoEasycom,
-      start: '2006',
-      end: '2010',
+      start: "2006",
+      end: "2010",
     },
-  ]
+  ];
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -215,12 +213,16 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="https://www.linkedin.com/in/guillaumemoigneu/" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="https://www.linkedin.com/in/guillaumemoigneu/"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         Connect on LinkedIn
         <ArrowRightIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
-  )
+  );
 }
 
 // function Photos() {
@@ -250,7 +252,7 @@ function Resume() {
 //   )
 // }
 
-function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -258,36 +260,59 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
       />
     </svg>
-  )
+  );
 }
 
 export const metadata: Metadata = {
-  title: "Developer, Speaker, Optimization freak. Sustainability & AI enthusiast | Guillaume Moigneu",
-  description: "Welcome to my personal website, where I share my experiences, projects, and insights on technology, sustainability, and AI.",
-  keywords: "Guillaume Moigneu, Principal Technology Advocate, Upsun, AI, Sustainability, Technology",
-}
+  title:
+    "Developer, Speaker, Optimization freak. Sustainability & AI enthusiast | Guillaume Moigneu",
+  description:
+    "Welcome to my personal website, where I share my experiences, projects, and insights on technology, sustainability, and AI.",
+  keywords:
+    "Guillaume Moigneu, Principal Technology Advocate, Upsun, AI, Sustainability, Technology",
+};
 
 export default async function Home() {
-  const articles = (await getArticles()).slice(0, 4)
+  const articles = (await getArticles()).slice(0, 4);
 
   return (
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Developer, Speaker, Optimization freak. Sustainability & AI enthusiast.
+            Developer, Speaker, Optimization freak. Sustainability & AI
+            enthusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Guillaume Moigneu, alias G/, <span className='font-semibold'>Principal Technology Advocate at Upsun</span>, a cloud applications platform dedicated to simplifying application deployment and operations. With a focus on <span className='font-semibold'>AI and Sustainability</span>, I strive to make running apps seamless for every developer.
+            I&apos;m Guillaume Moigneu, alias G/,{" "}
+            <span className="font-semibold">
+              Principal Technology Advocate at Upsun
+            </span>
+            , a cloud applications platform dedicated to simplifying application
+            deployment and operations. With a focus on{" "}
+            <span className="font-semibold">AI and Sustainability</span>, I
+            strive to make running apps seamless for every developer.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="https://bsky.app/profile/nls.io" icon={BlueSkyIcon} className="mt-4">
+            <SocialLink
+              href="https://bsky.app/profile/nls.io"
+              icon={BlueSkyIcon}
+              className="mt-4"
+            >
               Follow on BlueSky
             </SocialLink>
-            <SocialLink href="https://github.com/gmoigneu" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://github.com/gmoigneu"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="https://www.linkedin.com/in/guillaumemoigneu/" icon={LinkedInIcon} className="mt-4">
+            <SocialLink
+              href="https://www.linkedin.com/in/guillaumemoigneu/"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
@@ -315,5 +340,5 @@ export default async function Home() {
         </div>
       </Container>
     </>
-  )
+  );
 }
