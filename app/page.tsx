@@ -171,7 +171,7 @@ function Resume() {
   const resume: Array<Role> = [
     {
       company: "Upsun (Platform.sh)",
-      title: "Principal Technology Advocate",
+      title: "Field CTO",
       logo: logoUpsun,
       start: "2016",
       end: {
@@ -269,7 +269,7 @@ export const metadata: Metadata = {
   description:
     "Welcome to my personal website, where I share my experiences, projects, and insights on technology, sustainability, and AI.",
   keywords:
-    "Guillaume Moigneu, Principal Technology Advocate, Upsun, AI, Sustainability, Technology",
+    "Guillaume Moigneu, Field CTO, Upsun, AI, Sustainability, Technology",
 };
 
 export default async function Home() {
@@ -285,10 +285,8 @@ export default async function Home() {
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Guillaume Moigneu, alias G/,{" "}
-            <span className="font-semibold">
-              Principal Technology Advocate at Upsun
-            </span>
-            , a cloud applications platform dedicated to simplifying application
+            <span className="font-semibold">Field CTO at Upsun</span>, a cloud
+            applications platform dedicated to simplifying application
             deployment and operations. With a focus on{" "}
             <span className="font-semibold">AI and Sustainability</span>, I
             strive to make running apps seamless for every developer.
